@@ -2,11 +2,11 @@
 
 This simulator can be used to generate and verify, e.g., the numerical results provided in article [Multi-antenna Interference Management for Coded Caching](https://arxiv.org/abs/1711.03364).
 
-The simulator has been written in MATLAB and uses [CVX] (http://www.cvxr.com) to solve convex optimization problems.
+The simulator has been written in MATLAB and uses [CVX](http://www.cvxr.com) to solve convex optimization problems.
 
 ## Usage
 
-The simulator relies on [CVX] (http://www.cvxr.com) to solve convex problems. Either the cvx folder needs to be placed in the simulator root or CVX needs to be globally configured.
+The simulator relies on [CVX](http://www.cvxr.com) to solve convex problems. Either the cvx folder needs to be placed in the simulator root or CVX needs to be globally configured.
 
 The simulation scenarios are stored in the sims folder under individual subfolders.
 
