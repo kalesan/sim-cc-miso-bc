@@ -2,7 +2,7 @@ addpath('../..');
 addpath('../../cvx');
 cvx_setup
 
-SNR = 10 : 5 : 30;
+SNR = 10 : 5 : 40;
 
 ITERATIONS = 100;
 REALIZATIONS = 500;
