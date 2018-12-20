@@ -8,7 +8,7 @@ SS = K;
 for i = 1:length(SNR)
     snr = SNR(i);
 
-    rate = cacsim_subset_K6B3(L, K, SS, S, snr, 'realizations', realizations);
+    rate = cacsim_subset_K6B3(L, K, SS, S, snr, 'realizations', realizations, 'beta', 3);
 
     [rel, iter] = size(rate);
 
