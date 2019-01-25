@@ -1,4 +1,6 @@
-function rate = cacsim_mu(L, K, SNR_dB, varargin)
+function rate = cacsim_unicast_sinr(L, K, SNR_dB, varargin)
+    % Maxmin SINR unicast beamforming simulator.
+
     p = inputParser;
     
     p.addOptional('realizations',  500, @isnumeric);

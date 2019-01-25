@@ -5,7 +5,7 @@ rates = zeros(length(SNR), 1);
 for i = 1:length(SNR)
     snr = SNR(i)
 
-    rate = cacsim_mu(L, K, snr, 'realizations', REALIZATIONS);
+    rate = cacsim_unicast_sinr(L, K, snr, 'realizations', REALIZATIONS);
 
     [rel, iter] = size(rate);
 
