@@ -6,7 +6,7 @@ for i = 1:length(SNR)
 
     snr = SNR(i)
 
-    rate = cacsim_socp(L, K-1, snr, 'realizations', REALIZATIONS);
+    rate = cacsim_subset(L-1, K, K, S, snr, 'realizations', realizations);
 
     [rel, iter] = size(rate);
 
