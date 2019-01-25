@@ -1,4 +1,6 @@
 function rate = cacsim_sinr(L, K, SNR_dB, varargin)
+    % Simulator for Maxmin SINR with alpha = 1 and beta = 1
+
     p = inputParser;
     
     p.addOptional('realizations',  500, @isnumeric);

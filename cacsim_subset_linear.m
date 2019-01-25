@@ -1,4 +1,6 @@
 function rate = cacsim_subset_linear(L, K, SNR_dB, varargin)
+    % Simulator for alpha = K-1 and beta=1, i.e., zero cross-user interference.
+
     p = inputParser;
     
     p.addOptional('realizations',  500, @isnumeric);

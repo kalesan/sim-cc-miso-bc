@@ -1,4 +1,7 @@
 function rate = cc(precoder, filename, L, K, S, SNR_dB, varargin)
+    % Generic coded caching simulator that uses precoder type objects for
+    % specific precoder design.
+
     p = inputParser;
     
     p.addOptional('realizations',  500, @isnumeric);

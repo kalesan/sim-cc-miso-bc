@@ -1,4 +1,8 @@
 function rate = cacsim_subset_zf(L, K, S, SNR_dB, varargin)
+    % Simulator for alpha=beta=SS scenarios with zero-forcing precoders. 
+    %
+    % Note that the simultaneously served user subset size is generally alpha+1.
+
     p = inputParser;
     
     p.addOptional('realizations',  500, @isnumeric);

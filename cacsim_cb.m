@@ -1,4 +1,6 @@
 function rate = cacsim_cb(L, K, SNR_dB, varargin)
+    % Coordinated beamforming simulator without coded caching.
+
     p = inputParser;
     
     p.addOptional('realizations',  500, @isnumeric);

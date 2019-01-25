@@ -1,4 +1,6 @@
 function rate = cacsim_subset_K6B3(L, K, SS, S, SNR_dB, varargin)
+    % 6-user CC-BF-SCA simulator for beta=2
+
     p = inputParser;
     
     p.addOptional('realizations',  500, @isnumeric);
