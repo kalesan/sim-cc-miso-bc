@@ -1,17 +1,5 @@
 common;
 
-rates = zeros(length(SNR), 1);
-
-for i = 1:length(SNR)
-
-    snr = SNR(i)
-
-    rate = cacsim_zf_equal_power(L, K, snr, 'realizations', REALIZATIONS);
-
-    rates(i) = rates(i) + mean(rate(:,end));
-
-    % Store the results 
-    name = 'CC-ZF (equal power)';
-    save('data/sim-subset-3-zf-eq.mat', 'rates', 'name', 'SNR')
-end
-
+cc(precoder_zf('power_loading', false), 'data/sim-subset-3-eq-zf.mat', ...
+    L, K, S, SNR, ...
+   'REALIZATIONS', REALIZATIONS, 'name', 'CC-ZF (equal loading)');
