@@ -91,13 +91,9 @@ function rate = cacsim_subset(L, K, SS, S, SNR_dB, varargin)
                 R = R + (1 / min(R_mac(:)));
             end
 
-            split = nchoosek(K, SS) * max(1, nchoosek(K - 2, SS - 2));
-
             % Number of times we are transmitting with distinct user pair in
             % place.
             subfiles = nchoosek(K - 2, SS - 2);
-
-            split = nchoosek(K, SS) * max(1, split);
 
             % Total number of messages (per file). Each user has subfiles
             % number of parts.
