@@ -74,7 +74,9 @@ function rate = cacsim_subset(L, K, SS, S, SNR_dB, varargin)
             % SINR
             y_p = SINR(h, m, N0, alloc, SS, S);
 
-            R = 0;
+            % Calculated the time required for the transmission. Iterate over
+            % all time slots and sum up the time.
+            R = 0; % The sum transmission time
             for t = 1:T
                 % MAC rate points R_MAC
                 R_mac = [];
@@ -88,7 +90,7 @@ function rate = cacsim_subset(L, K, SS, S, SNR_dB, varargin)
                     end, end
                 end
 
-                R = R + (1 / min(R_mac(:)));
+                R = R + (1 / min(R_mac(:))); % Take the longest time in the MAC
             end
 
             % Number of times we are transmitting with distinct user pair in
@@ -99,7 +101,8 @@ function rate = cacsim_subset(L, K, SS, S, SNR_dB, varargin)
             % number of parts.
             split = subfiles * K;
 
-            rate(r, i) = split/R;
+            % Rate is the total number of messages over the sum transmission time.
+            rate(r, i) = split/R; % Store the rate for particular realization and algorithm iteration.
 
             disp(['Realization ' int2str(r) ' rate ' num2str(rate(r, i))  ...
                   ' pwr ' num2str(norm(m_p(:))^2 / (T * SNR) * 100) '%'])
